@@ -28,8 +28,8 @@ hf-login:
 	huggingface-cli login --token $(HF) --add-to-git-credential
 
 push-hub:
-	huggingface-cli upload ardm17/Lab10 ./App --repo-type=space --commit-message="Sync App files"
-	huggingface-cli upload ardm17/Lab10 ./Model /Model --repo-type=space --commit-message="Sync Model"
-	huggingface-cli upload ardm17/Lab10 ./Results /Metrics --repo-type=space --commit-message="Sync Model"
+	huggingface-cli upload ardm17/iris_ci_cd_pipeline ./App --repo-type=space --commit-message="Sync App files"
+	huggingface-cli upload ardm17/iris_ci_cd_pipeline ./Model /Model --repo-type=space --commit-message="Sync Model"
+	huggingface-cli upload ardm17/iris_ci_cd_pipeline ./Results /Metrics --repo-type=space --commit-message="Sync Model"
 
 deploy: hf-login push-hub
